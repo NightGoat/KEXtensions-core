@@ -1,8 +1,8 @@
 package ru.nightgoat.kextensionstests
 
-import ru.nightgoat.kexcore.tryOrDefault
-import ru.nightgoat.kexcore.tryOrEmpty
-import ru.nightgoat.kexcore.tryOrNull
+import io.github.nightgoat.kexcore.tryOrDefault
+import io.github.nightgoat.kexcore.tryOrEmpty
+import io.github.nightgoat.kexcore.tryOrNull
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

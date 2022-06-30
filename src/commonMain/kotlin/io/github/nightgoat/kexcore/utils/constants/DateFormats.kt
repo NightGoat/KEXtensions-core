@@ -1,4 +1,4 @@
-package ru.nightgoat.kexcore.utils.constants
+package io.github.nightgoat.kexcore.utils.constants
 
 object DateFormats {
     // Time formats

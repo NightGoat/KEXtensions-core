@@ -1,8 +1,8 @@
 package ru.nightgoat.kextensionstests
 
-import ru.nightgoat.kexcore.exists
-import ru.nightgoat.kexcore.orIfNull
-import ru.nightgoat.kexcore.orLet
+import io.github.nightgoat.kexcore.exists
+import io.github.nightgoat.kexcore.orIfNull
+import io.github.nightgoat.kexcore.orLet
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

@@ -1,7 +1,7 @@
-package ru.nightgoat.kexcore.utils
+package io.github.nightgoat.kexcore.utils
 
-import ru.nightgoat.kexcore.utils.logging.ConsoleLogger
-import ru.nightgoat.kexcore.utils.logging.ILogger
+import io.github.nightgoat.kexcore.utils.logging.ConsoleLogger
+import io.github.nightgoat.kexcore.utils.logging.ILogger
 import kotlin.native.concurrent.ThreadLocal
 
 /**

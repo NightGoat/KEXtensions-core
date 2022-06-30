@@ -1,9 +1,9 @@
 package ru.nightgoat.kextensionstests
 
-import ru.nightgoat.kexcore.orZero
-import ru.nightgoat.kexcore.reverse
-import ru.nightgoat.kexcore.toNegative
-import ru.nightgoat.kexcore.toPositive
+import io.github.nightgoat.kexcore.orZero
+import io.github.nightgoat.kexcore.reverse
+import io.github.nightgoat.kexcore.toNegative
+import io.github.nightgoat.kexcore.toPositive
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

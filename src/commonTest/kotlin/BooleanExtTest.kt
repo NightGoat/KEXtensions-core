@@ -1,6 +1,6 @@
 package ru.nightgoat.kextensionstests
 
-import ru.nightgoat.kexcore.*
+import io.github.nightgoat.kexcore.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull

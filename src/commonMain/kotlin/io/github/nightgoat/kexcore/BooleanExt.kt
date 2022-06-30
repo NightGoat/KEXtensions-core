@@ -1,4 +1,4 @@
-package ru.nightgoat.kexcore
+package io.github.nightgoat.kexcore
 
 fun Boolean?.orTrue(): Boolean = this ?: true
 fun Boolean?.orFalse(): Boolean = this ?: false

@@ -1,7 +1,7 @@
 package ru.nightgoat.kextensionstests
 
-import ru.nightgoat.kexcore.orZero
-import ru.nightgoat.kexcore.roundTo
+import io.github.nightgoat.kexcore.orZero
+import io.github.nightgoat.kexcore.roundTo
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals

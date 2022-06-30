@@ -1,10 +1,10 @@
-package ru.nightgoat.kexcore
+package io.github.nightgoat.kexcore
 
-import ru.nightgoat.kexcore.utils.constants.KexConstants
-import ru.nightgoat.kexcore.utils.constants.KexConstants.EMAIL_PATTERN
-import ru.nightgoat.kexcore.utils.constants.KexConstants.IP_ADDRESS_PATTERN
-import ru.nightgoat.kexcore.utils.constants.KexConstants.PHONE_PATTERN
-import ru.nightgoat.kexcore.utils.constants.KexConstants.ZERO_STRING
+import io.github.nightgoat.kexcore.utils.constants.KexConstants
+import io.github.nightgoat.kexcore.utils.constants.KexConstants.EMAIL_PATTERN
+import io.github.nightgoat.kexcore.utils.constants.KexConstants.IP_ADDRESS_PATTERN
+import io.github.nightgoat.kexcore.utils.constants.KexConstants.PHONE_PATTERN
+import io.github.nightgoat.kexcore.utils.constants.KexConstants.ZERO_STRING
 
 fun String.orIfEmpty(input: () -> String): String {
     return if (this.isEmpty()) input.invoke()

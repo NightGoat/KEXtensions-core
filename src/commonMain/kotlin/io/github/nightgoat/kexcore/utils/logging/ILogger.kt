@@ -1,4 +1,4 @@
-package ru.nightgoat.kexcore.utils.logging
+package io.github.nightgoat.kexcore.utils.logging
 
 interface ILogger {
     fun loggE(message: String, tag: String?, e: Throwable? = null)

@@ -1,8 +1,9 @@
 plugins {
     kotlin("multiplatform") version "1.6.21"
+    id("convention.publication")
 }
 
-group = "ru.nightgoat"
+group = "io.github.nightgoat"
 version = "1.0-SNAPSHOT"
 
 repositories {

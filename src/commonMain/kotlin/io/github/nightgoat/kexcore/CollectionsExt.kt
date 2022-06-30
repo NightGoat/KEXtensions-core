@@ -1,6 +1,6 @@
-package ru.nightgoat.kexcore
+package io.github.nightgoat.kexcore
 
-import ru.nightgoat.kexcore.utils.Kex
+import io.github.nightgoat.kexcore.utils.Kex
 
 fun <T> List<T>?.orEmptyMutable(): MutableList<T> = this?.toMutableList() ?: mutableListOf()
 

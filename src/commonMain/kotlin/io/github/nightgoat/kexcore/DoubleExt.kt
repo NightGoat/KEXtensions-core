@@ -1,4 +1,4 @@
-package ru.nightgoat.kexcore
+package io.github.nightgoat.kexcore
 
 import kotlin.math.abs
 import kotlin.math.pow

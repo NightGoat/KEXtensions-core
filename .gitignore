@@ -1,3 +1,13 @@
 /.gradle/
 /.idea/
 /build/
+local.properties
+*.iml
+.DS_Store
+build
+*/build
+captures
+.externalNativeBuild
+.cxx
+xcuserdata/
+Pods/

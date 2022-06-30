@@ -1,6 +1,6 @@
-package ru.nightgoat.kexcore.utils
+package io.github.nightgoat.kexcore.utils
 
-import ru.nightgoat.kexcore.log
+import io.github.nightgoat.kexcore.log
 
 /**
  * Fork of Try class, slightly modified

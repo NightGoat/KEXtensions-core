@@ -1,4 +1,4 @@
-package ru.nightgoat.kexcore.utils.logging
+package io.github.nightgoat.kexcore.utils.logging
 
 object ConsoleLogger : ILogger {
     override fun loggE(message: String, tag: String?, e: Throwable?) {

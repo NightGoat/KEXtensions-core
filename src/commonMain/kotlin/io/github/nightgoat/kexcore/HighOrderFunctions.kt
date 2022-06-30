@@ -1,6 +1,6 @@
-package ru.nightgoat.kexcore
+package io.github.nightgoat.kexcore
 
-import ru.nightgoat.kexcore.utils.Try
+import io.github.nightgoat.kexcore.utils.Try
 
 /**
  * try default fun realisation
