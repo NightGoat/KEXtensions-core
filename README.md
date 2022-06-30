@@ -1,3 +1,7 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.nightgoat/Kextensions-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.nightgoat/Kextensions-core)
+
+
+
 # KEXtensions core
 Kotlin extensions library.
 
