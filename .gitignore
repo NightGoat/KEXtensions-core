@@ -11,3 +11,4 @@ captures
 .cxx
 xcuserdata/
 Pods/
+secring.gpg

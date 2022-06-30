@@ -69,13 +69,13 @@ publishing {
             }
             developers {
                 developer {
-                    id.set("AsadullinNail")
+                    id.set("NightGoat")
                     name.set("Nail Asadullin")
                     email.set("alxumeg@gmail.com")
                 }
             }
             scm {
-                url.set("https://github.com/KaterinaPetrova/mpp-sample-lib")
+                url.set("https://github.com/NightGoat/KEXtensions-core")
             }
 
         }
