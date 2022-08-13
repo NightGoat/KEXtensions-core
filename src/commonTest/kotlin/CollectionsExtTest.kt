@@ -213,4 +213,12 @@ class CollectionsExtTest {
         )
         assertEquals(yellowSquareSequence, Shape(edges = 4, angle = 0, color = 3))
     }
+
+    @Test
+    fun addOnlyNew_test_1() {
+        val list1 = mutableListOf(1, 2, 3)
+        val list2 = listOf(1, 4, 5)
+        val list3 = list1.addOnlyNew(list2)
+        assertEquals(list3, listOf(1, 2, 3, 4, 5))
+    }
 }
