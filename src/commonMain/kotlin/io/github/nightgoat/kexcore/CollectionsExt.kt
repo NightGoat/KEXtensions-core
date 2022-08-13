@@ -32,6 +32,15 @@ fun <T> MutableCollection<T>.addIf(whatToAdd: T, predicate: (MutableCollection<T
     if (predicate.invoke(this)) this.add(whatToAdd)
 }
 
+fun <T, S : MutableCollection<T>> S.addOnlyNew(whatToAdd: Collection<T>): S {
+    whatToAdd.forEach { element ->
+        if (!this.contains(element)) {
+            this.add(element)
+        }
+    }
+    return this
+}
+
 fun <T : Any> Iterable<T>.findIndexed(predicate: (T) -> Boolean): Pair<Int, T>? {
     this.forEachIndexed { index, t ->
         if (predicate(t)) {
@@ -77,14 +86,14 @@ inline fun <reified T> Collection<T>.firstOrElse(elseFun: () -> T): T {
 /**
  * Returns size in instance of Double
  */
-fun <T> List<T>.sizeInDouble(): Double {
+fun <T> Collection<T>.sizeInDouble(): Double {
     return this.size.toDouble()
 }
 
 /**
  * Returns size in instance of String
  */
-fun <T> List<T>.sizeInString(): String {
+fun <T> Collection<T>.sizeInString(): String {
     return this.size.toString()
 }
 
@@ -95,12 +104,12 @@ inline fun <reified R> Iterable<*>.findInInstanceOf(
     return null
 }
 
-inline fun <T, K> List<T>?.mapNotNullOrEmpty(transform: (T) -> K?): List<K> =
+inline fun <T, K> Collection<T>?.mapNotNullOrEmpty(transform: (T) -> K?): List<K> =
     this.orEmpty().mapNotNull {
         transform.invoke(it)
     }
 
-inline fun <T, K> List<T>?.mapOrEmpty(transform: (T) -> K): List<K> = this.orEmpty().map {
+inline fun <T, K> Collection<T>?.mapOrEmpty(transform: (T) -> K): List<K> = this.orEmpty().map {
     transform.invoke(it)
 }
 
@@ -108,7 +117,7 @@ inline fun <T, K> List<T>?.mapOrEmpty(transform: (T) -> K): List<K> = this.orEmp
  * Just and example of how to work with Sequence
  * @see <a href="http://google.com">https://nuancesprog.ru/p/4603/</a>
  * */
-fun <T, R> List<T>.mapAndFind(map: (T) -> R, find: (R) -> Boolean) = this.asSequence()
+fun <T, R> Collection<T>.mapAndFind(map: (T) -> R, find: (R) -> Boolean) = this.asSequence()
     .map(map)
     .find(find)
 
@@ -116,9 +125,9 @@ fun <T, R> List<T>.mapAndFind(map: (T) -> R, find: (R) -> Boolean) = this.asSequ
  * Swaps elements by entered positions and returns list. Returns not changed list, if second index
  * less or equals than first. Swaps first and last item by default.
  */
-fun <T : Any> MutableList<T>.swap(
+fun <T : Any> MutableCollection<T>.swap(
     firstIndex: Int = 0,
-    secondIndex: Int = this.lastIndex
+    secondIndex: Int = this.size - 1
 ): MutableList<T> {
     val list = this.toMutableList()
     if (secondIndex > firstIndex) {
@@ -141,14 +150,14 @@ fun <T : Any> MutableList<T>.swap(
 /**
  * Swaps first and last item.
  */
-fun <T : Any> MutableList<T>.swapFirstAndLastElement(): MutableList<T> {
+fun <T : Any> MutableCollection<T>.swapFirstAndLastElement(): MutableList<T> {
     return this.swap()
 }
 
 /**
  * Finds object in list and moves to entered position. Moves to first position by default.
  */
-fun <T : Any> MutableList<T>.moveToPosition(
+fun <T : Any> MutableCollection<T>.moveToPosition(
     position: Int = 0,
     findItemBy: (T) -> Boolean
 ): MutableList<T> {
@@ -167,18 +176,18 @@ fun <T : Any> MutableList<T>.moveToPosition(
 /**
  * Finds object in list and moves to first position
  */
-fun <T : Any> MutableList<T>.moveToFirstPosition(findItemBy: (T) -> Boolean): MutableList<T> {
+fun <T : Any> MutableCollection<T>.moveToFirstPosition(findItemBy: (T) -> Boolean): MutableList<T> {
     return moveToPosition(findItemBy = findItemBy)
 }
 
 /**
  * Finds object in list and moves to last position
  */
-fun <T : Any> MutableList<T>.moveToLastPosition(findItemBy: (T) -> Boolean): MutableList<T> {
-    return moveToPosition(position = this.lastIndex, findItemBy = findItemBy)
+fun <T : Any> MutableCollection<T>.moveToLastPosition(findItemBy: (T) -> Boolean): MutableList<T> {
+    return moveToPosition(position = this.size - 1, findItemBy = findItemBy)
 }
 
-fun <T : Any> MutableList<T>.replaceAt(newItem: T, index: Int) = this.mapIndexed { i, item ->
+fun <T : Any> MutableCollection<T>.replaceAt(newItem: T, index: Int) = this.mapIndexed { i, item ->
     if (index == i) {
         newItem
     } else {
@@ -186,7 +195,7 @@ fun <T : Any> MutableList<T>.replaceAt(newItem: T, index: Int) = this.mapIndexed
     }
 }
 
-fun <T : Any> List<T>.takeIfNotEmpty(): List<T>? {
+fun <T : Any, S : Collection<T>> S.takeIfNotEmpty(): S? {
     return this.takeIf { this.isNotEmpty() }
 }
 
