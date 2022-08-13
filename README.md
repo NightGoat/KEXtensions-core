@@ -4,6 +4,7 @@
 
 # KEXtensions core
 Kotlin extensions library.
+Android extensions libray is [here](https://github.com/NightGoat/KEXtensions-android).
 
 ## Examples:
 Using this library does not require knowledge or skill, this extensions will work as part of Kotlin language.
